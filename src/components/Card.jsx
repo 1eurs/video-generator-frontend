@@ -6,8 +6,7 @@ import CheckboxInput from "./CheckboxInput";
 import { Tab } from "@headlessui/react";
 import axios from "axios";
 
-const API = "http://172.30.61.5:5000";
-
+const API = "http://127.0.0.1:5000";
 
 const FONT_FAMILY_OPTIONS = [
   "Roboto",
@@ -140,11 +139,11 @@ const Card = () => {
   };
 
   return (
-    <div className="bg-gray-800 p-8 rounded-lg shadow-2xl max-w-4xl mx-auto">
-      <div className="flex gap-12 justify-center items-center">
-        <div className="max-w-64 min-w-64 ">
+    <div className="mx-auto max-w-4xl rounded-lg bg-gray-800 p-8 shadow-2xl">
+      <div className="flex items-center justify-center gap-12">
+        <div className="min-w-64 max-w-64 ">
           <Tab.Group>
-            <Tab.List className="flex p-1 space-x-1 bg-blue-900/20 rounded-xl">
+            <Tab.List className="flex space-x-1 rounded-xl bg-blue-900/20 p-1">
               <Tab as={React.Fragment}>
                 {({ selected }) => (
                   <button
@@ -269,10 +268,10 @@ const Card = () => {
               </Tab.Panel>
             </Tab.Panels>
           </Tab.Group>
-          <div className="flex justify-center items-center">
+          <div className="flex items-center justify-center">
             <button
               onClick={handleGenerate}
-              className="bg-gradient-to-r from-blue-500 to-blue-700 text-white font-bold py-2 px-4 rounded-lg shadow-md transition duration-150 ease-in-out transform hover:bg-blue-600 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50 w-[92%]"
+              className="w-[92%] transform rounded-lg bg-gradient-to-r from-blue-500 to-blue-700 px-4 py-2 font-bold text-white shadow-md transition duration-150 ease-in-out hover:scale-105 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50"
             >
               Generate
             </button>
